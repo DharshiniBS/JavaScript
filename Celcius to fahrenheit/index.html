@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Celcius to fahrenheit Conversion</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Celcius to fahrenheit Conversion</h2>
+        <div class="classdiv">
+            <input type="text" id="input" placeholder="Enter Celcius">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert(){
+        const celvalue = Number(document.getElementById("input").value)
+        const fahvalue = celvalue * 1.8 + 32
+        const res = document.getElementById('result')
+        res.innerHTML = fahvalue.toFixed(2) + " fahrenheit"
+        }    
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>No. of words calculator</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Type a Sentence</h2>
+        <div class="classdiv">
+            <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Calculate Words</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        function convert(){
+            const sentence = document.getElementById('txt').value
+            const wordcount = sentence.split(' ').length
+            const res = document.getElementById('result')
+            res.innerHTML = wordcount + ' words'
+        }
+    </script>
+</body>
+</html>
