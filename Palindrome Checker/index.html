@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome Checker</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Palindrome Checker</h2>
+        <div class="classdiv">
+            <input type="text" id="input" placeholder="Enter a sentence">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Check</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert(){
+            let sentence = document.getElementById("input").value
+            
+            let reg = /[\W_]/g;
+            let low = sentence.toLowerCase().replace(reg, '');
+            let reverse = low.split('').reverse().join(''); 
+            
+            let result
+            if (reverse === low)
+                result = "Palindrome"
+            else
+                result = "Not a Palindrome"
+
+            const res = document.getElementById('result')
+            res.innerHTML = result
+        }    
+    </script>
+</body>
+
+</html>
