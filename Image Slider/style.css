@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    padding:0;  
+    box-sizing: border-box;
+    background-color:rgb(165, 234, 248);
+}
+
+.container{
+    min-height: 75vh;
+    width: 60%;
+    border: 7px solid rgba(253, 252, 255, 0.803);
+    margin: 4rem auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 35px rgba(0,0,0,0.6);
+    position: relative;
+    background: url("img/1.jpg") center/cover fixed no-repeat;
+    transition: background 1s ease-in-out;
+}
+
+.btn-left{
+    position:absolute;
+    top:50%;
+    left:-2%;
+    background-color: white;
+    padding:.4em .6em;
+    border-radius: 2em;
+    transform:translateY(calc(-50%));
+    cursor: pointer;
+}
+.btn-right{
+    position:absolute;
+    top:50%;
+    right:-2%;
+    background-color: white;
+    padding:.4em .6em;
+    border-radius: 2em;
+    transform:translateY(calc(-50%));
+    cursor: pointer;
+}
